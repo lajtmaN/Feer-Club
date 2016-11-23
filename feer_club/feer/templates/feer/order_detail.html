@@ -17,7 +17,7 @@
   {% for p, c in costs %}
     <tr>
       <td>{{ p }}</td>
-      <td>{{ c }}</td>
+      <td>{{ c }} (Pay with <a href="http://mobilepay.dk/js_css/mobilepay2/App-Integration/open.html?phone=004528302813&amount={{ str(c) }}&comment={{ order.name.replace(' ', '%20') }}&lock=1">MobilePay</a>)</td>
     </tr>
   {% endfor %}
   </table>
