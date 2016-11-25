@@ -18,7 +18,7 @@
     <tr>
       <td>{{ p }}</td>
       <td>{{ c }} 
-      {% if user|stringformat:"s" == p %}
+      {% if not order.updatable and user|stringformat:"s" == p %}
       (Pay with <a href="http://mobilepay.dk/js_css/mobilepay2/App-Integration/open.html?phone=004528302813&amount={{ c }}&comment={{ order.name }}%20from%20{{ p }}&lock=1">MobilePay</a>)
       {% endif %}
       </td>
